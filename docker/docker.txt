@@ -1,4 +1,0 @@
-https://developers.eos.io/eosio-nodeos/docs/docker-quickstart
-
-https://github.com/EOSIO/eos/tree/master/Docker
-
