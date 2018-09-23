@@ -1,3 +1,3 @@
-docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 push action registrar newpatient '["patient", "James", "Fisher", "1982-09-01"]' -p patient@active
+docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 push action registrar newpatient '["patient", "Summer", "Smith", "1955-11-12"]' -p patient@active
 
 
