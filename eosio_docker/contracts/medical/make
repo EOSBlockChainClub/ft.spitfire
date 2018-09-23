@@ -1,0 +1,4 @@
+alias eosiocpp='docker exec eosio_notechain_container eosiocpp'
+
+docker exec eosio_notechain_container eosiocpp -o /opt/eosio/bin/contracts/medical/medical.wast /opt/eosio/bin/contracts/medical/medical.cpp
+docker exec eosio_notechain_container eosiocpp -g /opt/eosio/bin/contracts/medical/medical.abi /opt/eosio/bin/contracts/medical/medical.cpp

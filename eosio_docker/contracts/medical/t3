@@ -1,0 +1,3 @@
+docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 push action registrar prescribe  '["doctor", "patient", "give him placebos"]' -p patient@active
+
+

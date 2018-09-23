@@ -1,0 +1,4 @@
+docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 wallet open
+docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 wallet unlock --password `cat wallet_password.txt`
+
+docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 set contract registrar /opt/eosio/bin/contracts/medical/ --permission registrar@active
