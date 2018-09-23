@@ -4,8 +4,8 @@
 
 HealthCheck DApp allow to store health information for patients with privacy and secturity, while allowing to collect anonymous data for the common good, to help advance health related data statistics and investigation.
 
-To achieve this goal, the Dapp data is encrypted righ in the browser with user private key and public key of the person who he wants to share this data, so only them can access contents.
-While doing this, the Health data is published clear for public use, and does not relate to Persons.
+To achieve this goal, the Dapp data is encrypted righ in the browser with user private key and public key of the person who he wants to share this data (like a doctor or a pharmacist), so only them can access the private data.
+While doing this, the Health data (that does not relate to Person) is published clear for public use.
 
 Dapp Data
 - Person Data (encrypted)
