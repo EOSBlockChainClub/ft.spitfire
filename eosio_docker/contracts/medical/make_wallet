@@ -1,6 +1,0 @@
-docker exec eosio_notechain_container /opt/eosio/bin/cleos -u http://localhost:8888 wallet create --to-console | grep \" | tr -d '"'  > wallet_password.txt
-
-cat wallet_password.txt
-
-
-
