@@ -1,5 +1,6 @@
 # Overview
-# EOS Hackathon submission for team ft.spitfire: HealthCheck DApp.
+# EOS Hackathon submission for team ft.spitfire
+# HealthCheck DApp.
 
 HealthCheck DApp allow to store health information for patients with privacy and secturity, while allowing to collect anonymous data for the common good, to help advance health related data statistics and investigation.
 
