@@ -98,7 +98,6 @@ class medical : public eosio::contract {
 
        auto itr = _records.find( _patient );
       eosio_assert( itr != _records.end(), "Record does not exit" );
-      eosio_assert( itr->pending_updates == "", "A medical update is already pending." );
 
       _records.modify( itr, _patient, [&]( auto& rcrd ) {
             rcrd.pending_updates = _update; 
