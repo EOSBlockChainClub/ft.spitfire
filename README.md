@@ -8,8 +8,8 @@ To achieve this goal, the Dapp data is encrypted righ in the browser with user p
 While doing this, the Health data is published clear for public use, and does not relate to Persons.
 
 Dapp Data
-.Person Data (encrypted)
-.Health Data
+- Person Data (encrypted)
+- Health Data
 
 In current version, everything is stored in clear mode in the EOSIO RAM. No encryption is made yet.
 In the future version all the data will be stored on IPFS, and just a hashes are stored on the blockchain.
