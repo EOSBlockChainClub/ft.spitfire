@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Sun Sep 23 2018 07:06:32 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Sep 23 2018 10:53:28 GMT+0000 (UTC)  -->
 <html data-wf-page="5ba6deec5ced0c1095e575fb" data-wf-site="5ba674ea5ced0c6278e52b34">
 <head>
        <!-- START Bootstrap, BlockChain, CSS -->
@@ -79,10 +79,15 @@
           <p class="paragraph-2"><span class="text-span-5">APPOINTMENT NOTES<br></span></p>
         </div>
         <div class="w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" class="div-block"><textarea id="pending_update" name="field-2" data-name="Field 2" maxlength="5000" class="text-field w-input"></textarea>
+          <form id="email-form" name="email-form" data-name="Email Form" class="div-block"><textarea id="pending_update" name="field-2" data-name="Field 2" maxlength="5000" class="text-field w-input"></textarea><input type="button" value="SMART RECOMMENDATION" data-wait="Please wait..." class="submit-button recom w-button">
             <h2 class="heading-2"><span class="text-span-2 orange-title">Prescription<br></span></h2>
             <p class="paragraph-2"><span class="text-span-5"><strong>INPUT INFO</strong><br></span></p><textarea id="prescriptions" name="field-2" data-name="Field 2" maxlength="5000" class="text-field w-input"></textarea><input type="button" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button" onclick="bcPushUpdate(); return true;"></form>
-
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
         </div>
         <div class="div-block"></div>
       </div>

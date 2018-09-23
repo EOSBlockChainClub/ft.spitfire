@@ -4,6 +4,9 @@ set -o errexit
 # change to script's directory
 cd "$(dirname "$0")/eosio_docker"
 
+rm -rf data
+mkdir data
+
 if [ -e "data/initialized" ]
 then
     script="./scripts/continue_blockchain.sh"

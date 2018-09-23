@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'HC';
-  src:  url('HKGrotesk-Bold.ttf') format('truetype');
+  src:  url('/font/HKGrotesk-Bold.ttf') format('truetype');
 }
 
 body {
@@ -64,7 +64,6 @@ p {
   font-size: 15px;
   line-height: 24px;
 }
-
 .nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -927,6 +926,8 @@ p {
   padding-right: 0px;
   padding-left: 0px;
   border-bottom-right-radius: 0px;
+  background-color: #4e8cc4;
+}
 
 .text-span-5 {
   font-size: 12px;
