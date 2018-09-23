@@ -1,3 +1,7 @@
+*.swp
+*.abi
+*.wasm
+*.wast
 eosio_docker/data/*
 eosio_docker/data
 frontend/node_modules/.cache
