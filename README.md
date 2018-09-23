@@ -7,9 +7,9 @@ HealthCheck DApp allow to store health information for patients with privacy and
 To achieve this goal, the Dapp data is encrypted righ in the browser with user private key and public key of the person who he wants to share this data, so only them can access contents.
 While doing this, the Health data is published clear for public use, and does not relate to Persons.
 
-Dapp Data<br/>
-  Person Data (encrypted)<br/>
-  Health Data<br/>
+Dapp Data
+.Person Data (encrypted)
+.Health Data
 
 In current version, everything is stored in clear mode in the EOSIO RAM. No encryption is made yet.
 In the future version all the data will be stored on IPFS, and just a hashes are stored on the blockchain.
