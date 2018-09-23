@@ -17,7 +17,6 @@ class medical : public eosio::contract {
       account_name patient;         // account name for the patient 
       std::string  forename;
       std::string  surname;
-      std::string  dob;
       std::string  medical_history; // encrypted medical history
       std::string  pending_updates; // encrypted pending_updates 
       std::string  prescriptions;   // encrypted pending_updates 
@@ -26,8 +25,7 @@ class medical : public eosio::contract {
       // primary key
       auto primary_key() const { return patient; }
 
-      EOSLIB_SERIALIZE( smedical, (patient)(forename)(surname)(dob)(medical_history)(pending_updates)(prescriptions)(timestamp))
-
+      EOSLIB_SERIALIZE( smedical, (patient)(forename)(surname)(medical_history)(pending_updates)(prescriptions)(timestamp))
     };
 
     // create a multi-index table and support secondary key
@@ -41,7 +39,7 @@ class medical : public eosio::contract {
     {}
 
     /// @abi action
-    void newpatient( account_name _patient, const std::string& _forename, const std::string& _surname, const std::string& _dob) {
+    void newpatient( account_name _patient, const std::string& _forename, const std::string& _surname, const std::string& _medical_history) {
       print("newpatient: ", name{_patient});      
 
       eosio_assert( _records.find(_patient) == _records.end(), "This patient already has an account" );
@@ -50,8 +48,7 @@ class medical : public eosio::contract {
           rcrd.patient = _patient;
           rcrd.forename = _forename;
           rcrd.surname = _surname;
-          rcrd.dob = _dob;
-          rcrd.medical_history = "";
+          rcrd.medical_history = _medical_history;
           rcrd.pending_updates = "";
           rcrd.prescriptions = "";
           rcrd.timestamp = now(); 
@@ -98,7 +95,6 @@ class medical : public eosio::contract {
 
        auto itr = _records.find( _patient );
       eosio_assert( itr != _records.end(), "Record does not exit" );
-
       _records.modify( itr, _patient, [&]( auto& rcrd ) {
             rcrd.pending_updates = _update; 
             rcrd.timestamp = now(); 

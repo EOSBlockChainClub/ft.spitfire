@@ -52,13 +52,13 @@
   <div class="class-section w-hidden-medium">
     <div class="wrap-2 a">
       <div class="left-1">
-        <h2 class="heading-2"><span class="text-span-2">Hello, Sharon</span></h2>
+        <h2 class="heading-2"><span class="text-span-2" id="hello"></span></h2>
         <p class="paragraph-2"><span class="text-span-4">CURRENT APPOINTMENT</span></p>
       </div>
     </div>
     <div class="wrap-2 b">
       <div class="left-2">
-        <div class="left-1"><img src="images/menu-with-check.png" width="221" class="image"></div>
+        <div class="left-1" style="margin-top:20px"><img src="images/menu-with-check.png" width="221" class="image"></div>
       </div>
       <div class="right-2">
         <div class="div-block">
@@ -67,13 +67,12 @@
         </div>
         <div class="w-form">
           <form id="email-form" name="email-form" data-name="Email Form" class="div-block"><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="Name" id="pending_text">
-            <h2 class="heading-2"><span class="text-span-2 orange-title"><strong>Prescription</strong><br></span></h2><input type="text" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" id="prescription_text" required=""><input type="submit" value="REJECT" data-wait="Please wait..." class="submit-button reject w-button" onclick="bcRejectAction();"><input type="submit" value="ACCEPT" data-wait="Please wait..." class="submit-button w-button" onclick="bcAcceptAction();"></form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
+            <h2 class="heading-2"><span class="text-span-2 orange-title"><strong>Prescription</strong><br></span></h2><input type="text" class="text-field-2 w-input" maxlength="256" name="email" data-name="Email" placeholder="Antibiotics Course" id="prescription_text" required="">
+            <div class="w-row">
+              <div class="column-4 w-col w-col-6"><input type="button" value="REJECT" data-wait="Please wait..." class="submit-button reject w-button" onclick="bcRejectAction();"></div>
+              <div class="column-3 w-col w-col-6"><input type="button" value="ACCEPT" data-wait="Please wait..." class="submit-button w-button" onclick="bcAcceptAction();"></div>
+            </div>
+          </form>
         </div>
         <div class="div-block">
           <p class="paragraph-2 small"><span>Click ACCEPT to reveal barcode to scan upon collection.<br></span></p>

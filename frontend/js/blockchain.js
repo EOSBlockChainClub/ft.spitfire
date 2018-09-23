@@ -140,6 +140,7 @@ function bcLoadApprovals()
 
       document.getElementById("pending_text").value = res.rows[0].pending_updates;
       document.getElementById("prescription_text").value = res.rows[0].prescriptions;
+      document.getElementById("hello").innerHTML = "Hello, " + res.rows[0].forename;
     })
     .catch(e => console.log(e));
 }
@@ -232,11 +233,8 @@ async function bcDispensedAction()
       }
     );
 
-    console.log(result);
-    
-    bcLoadApprovals();
-
-    
+    console.log("dispensed");
+        
 }
 
 function bcLoadPatientData()
@@ -252,12 +250,10 @@ function bcLoadPatientData()
     
     jsonObj
     .then(res => {
-      console.log(document.getElementById("pending_update"));
-      console.log(res.rows[0].pending_updates);
+      document.getElementById("medical_history").value = res.rows[0].medical_history;
       document.getElementById("pending_update").value = res.rows[0].pending_updates;
-      document.getElementById("forename").value = res.rows[0].forename;
-      document.getElementById("surname").value = res.rows[0].surname;
-      document.getElementById("dob").value = res.rows[0].dob;
+      document.getElementById("prescriptions").value = res.rows[0].prescriptions;
+      document.getElementById("fullname").value = res.rows[0].forename + " " + res.rows[0].surname;
     })
     .catch(e => console.log(e));
     

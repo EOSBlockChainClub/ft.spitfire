@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Sun Sep 23 2018 02:57:36 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Sep 23 2018 07:06:32 GMT+0000 (UTC)  -->
 <html data-wf-page="5ba6deec5ced0c1095e575fb" data-wf-site="5ba674ea5ced0c6278e52b34">
 <head>
        <!-- START Bootstrap, BlockChain, CSS -->
@@ -36,7 +36,7 @@
 <body onload="bcLoadPatientData();">
   <div data-collapse="medium" data-animation="default" data-duration="400" class="nav w-nav">
     <div class="nav-container w-container"><a href="#" class="logo w-nav-brand"><img src="images/health-check.png" width="97"></a>
-      <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="nav-link w-nav-link">Patient Portal</a><a href="#" class="nav-link w-nav-link">Doctors <strong>Portal</strong></a><a href="#" class="nav-link w-nav-link">Pharmacy <strong>Portal</strong></a></nav>
+      <nav role="navigation" class="nav-menu w-nav-menu"><a href="patient-portal.html" class="nav-link w-nav-link">Patient Portal</a><a href="doctor-portal.html" class="nav-link w-nav-link w--current">Doctors <strong>Portal</strong></a><a href="pharmacy-portal.html" class="nav-link w-nav-link">Pharmacy <strong>Portal</strong></a></nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
@@ -51,7 +51,7 @@
     <div class="wrap-2 a">
       <div class="left-1">
         <h2 class="heading-2"><span class="text-span-2">Hello, Dr. R Sanchez</span></h2>
-        <p class="paragraph-2"><span class="text-span-4">MRS. SHARON LONDON</span></p>
+        <p class="paragraph-2"><span class="text-span-4" id="fullname">MRS. SUMMER SMITH</span></p>
       </div>
     </div>
     <div class="wrap-2 b">
@@ -60,14 +60,11 @@
         <div class="action w-form">
           <form id="email-form" name="email-form" data-name="Email Form" class="div-block treatment">
             <div class="div-block">
-              <h2 class="heading-2"><span class="text-span-2 orange-title white">Actions<br></span></h2>
-              <p class="paragraph-2 white"><span class="text-span-5">INPUT INFO<br></span></p>
-            </div><input type="text" class="text-field w-input" maxlength="256" name="Name-2" data-name="Name 2" id="Name-2">
-            <div class="div-block"></div>
+              <h2 class="heading-2"><span class="text-span-2 orange-title white">Patient Medical Records<br></span></h2>
+            </div>
             <div class="div-block">
-              <h2 class="heading-2"><span class="text-span-2 orange-title white"><strong>Prescription</strong><br></span></h2>
-              <p class="paragraph-2 white"><span class="text-span-5">INPUT INFO<br></span></p>
-            </div><input type="text" class="text-field-2 white-back w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="6 Months 100mg Amoxicillin " id="email-2" required=""><input type="submit" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button"></form>
+              <p class="paragraph-2 white"><span class="text-span-5">HISTORY<br></span></p>
+            </div><textarea id="medical_history" name="field-2" data-name="Field 2" maxlength="5000" class="text-field history w-input"></textarea></form>
           <div class="w-form-done">
             <div>Thank you! Your submission has been received!</div>
           </div>
@@ -82,21 +79,12 @@
           <p class="paragraph-2"><span class="text-span-5">APPOINTMENT NOTES<br></span></p>
         </div>
         <div class="w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" class="div-block"><input type="text" class="text-field w-input" maxlength="256" name="pending_update" data-name="Name" id="pending_update">
-            <h2 class="heading-2"><span class="text-span-2 orange-title">Patient Medical Records<br></span></h2>
-            <p class="paragraph-2"><span class="text-span-5">FIRST NAME<br></span></p><input type="text" class="text-field-2 w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="XXXXXXXXXX" id="forename" required="">
-            <p class="paragraph-2"><span class="text-span-5">LAST NAME<br></span></p><input type="text" class="text-field-2 w-input" maxlength="256" name="email-3" data-name="Email 3" placeholder="XXXXXXXXXX" id="surname" required="">
-            <p class="paragraph-2"><span class="text-span-5">DATE OF BIRTH<br></span></p><input type="text" class="text-field-2 w-input" maxlength="256" name="email-3" data-name="Email 3" placeholder="XXXXXXXXXX" id="dob" required=""><input type="submit" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button" onclick="bcPushUpdate();"></form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
+          <form id="email-form" name="email-form" data-name="Email Form" class="div-block"><textarea id="pending_update" name="field-2" data-name="Field 2" maxlength="5000" class="text-field w-input"></textarea>
+            <h2 class="heading-2"><span class="text-span-2 orange-title">Prescription<br></span></h2>
+            <p class="paragraph-2"><span class="text-span-5"><strong>INPUT INFO</strong><br></span></p><textarea id="prescriptions" name="field-2" data-name="Field 2" maxlength="5000" class="text-field w-input"></textarea><input type="button" value="SUBMIT" data-wait="Please wait..." class="submit-button w-button" onclick="bcPushUpdate(); return true;"></form>
+
         </div>
-        <div class="div-block">
-          <p class="paragraph-2 small"><span>Click ACCEPT to reveal barcode to scan upon collection.<br></span></p>
-        </div>
+        <div class="div-block"></div>
       </div>
     </div>
     <div class="wrap-2 a"></div>
